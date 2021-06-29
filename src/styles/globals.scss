@@ -2,13 +2,33 @@
 .container-fluid {
   background-color: var(--color-black);
   display: flex;
-  height: 100vh;
-  width: fit-content;
-  overflow: hidden;
+  flex-direction: row;
+  // height: 100vh;
+  width: 440vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 section {
   width: fit-content;
   overflow: hidden;
+}
+body {
+  overflow-y: hidden;
+  overflow-x: auto;
 }
 //Hero
 header {
@@ -36,7 +56,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.5em auto 0.1em;
+    margin: 0.25em auto 0.1em;
     z-index: 10;
     cursor: default;
   }
@@ -71,8 +91,8 @@ header {
   }
   img {
     position: absolute;
-    left: 22.5%;
-    top: 50%;
+    left: 5.25%;
+    top: 40%;
     transform: translateY(-50%);
     z-index: 99;
   }
@@ -125,14 +145,18 @@ footer {
 .works {
   background-color: var(--color-black);
   margin: 0.5em;
-  width: 120vw;
+  width: 140vw;
   height: 100vh;
   margin: 0em 10em 0em 30em;
+  transform: translateY(-5%);
 
   h1 {
     font-size: 8em;
     cursor: default;
     margin: 0;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: var(--color-white);
+    -webkit-text-stroke-width: 1px;
   }
 
   .card-container {
@@ -197,7 +221,14 @@ footer {
   }
 
   img.card-image {
-    height: 310px;
+    height: 300px;
+    width: 330px;
+    box-shadow: 0px 0px 15px -5px var(--black-color);
+    border-radius: 8px;
+  }
+
+  video.card-image {
+    height: 300px;
     width: 330px;
     box-shadow: 0px 0px 15px -5px var(--black-color);
     border-radius: 8px;
@@ -218,13 +249,15 @@ footer {
     line-height: 24px;
   }
   .overlay {
-    height: 310px;
+    height: 300px;
     width: 330px;
     background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     transition: 0.4s ease;
     position: absolute;
     top: 0;
+    border-radius: 8px;
+    transform: translateY(2.7%);
 
     &:hover {
       opacity: 1;
@@ -239,20 +272,23 @@ footer {
   background-color: var(--color-black);
   height: fit-content !important;
   width: fit-content;
-  margin: 0em 2em;
+  margin: 0em 12em;
   overflow: hidden;
 
   h2 {
     font-size: 4em;
     cursor: default;
+    transform: translateY(-60%);
   }
   .contact-container {
     display: flex;
     flex-direction: row;
-    margin: 2em 3em;
+    margin: 1em 3em;
+    transform: translateY(-10%);
 
     img {
       margin: 0em 7em;
+      display: none;
     }
 
     form {
@@ -262,7 +298,7 @@ footer {
       justify-content: flex-end;
       border-radius: 15%;
       z-index: 3;
-      margin: 0em 10em;
+      margin: 0em 15em;
     }
     .form-title {
       color: var(--color-white);
@@ -281,11 +317,11 @@ footer {
       resize: none;
       border: none;
       border-bottom: 2px var(--color-accent) solid;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       color: var(--color-white);
-      font-size: 1.2rem;
+      font-size: 1rem;
       transition: all 0.5s;
-      width: 100%;
+      width: 150%;
 
       &::placeholder {
         color: transparent;
@@ -294,16 +330,16 @@ footer {
         border-color: var(--color-primary);
       }
       &:focus + .form-label {
-        transform: translateY(-4.5em) scale(0.8);
+        transform: translateY(-5em) scale(0.8);
       }
       &:not(:placeholder-shown) + .form-label {
-        transform: translateY(-4.5em) scale(0.8);
+        transform: translateY(-5em) scale(0.8);
       }
       &:focus + .messaging {
-        transform: translateY(-14.7em) scale(0.8);
+        transform: translateY(-13.2em) scale(0.8);
       }
       &:not(:placeholder-shown) + .messaging {
-        transform: translateY(-14.7em) scale(0.8);
+        transform: translateY(-13.2em) scale(0.8);
       }
     }
     .btnSubmit {
@@ -338,7 +374,7 @@ footer {
       display: block;
       width: fit-content;
       position: absolute;
-      transform: translateY(-3.4em);
+      transform: translateY(-4.2em);
       transform-origin: 0 0;
       margin-left: 0.5em;
       transition: all 0.3s;
@@ -348,7 +384,7 @@ footer {
       color: var(--font-color);
       display: block;
       position: absolute;
-      transform: translateY(-3.6em);
+      transform: translateY(-4.3em);
       margin-left: 0.5em;
       transform-origin: 0 0;
       transition: all 0.3s;
@@ -364,33 +400,33 @@ footer {
   display: flex;
   flex-direction: row;
   margin-top: -1em;
+  transform: translateY(-5%);
 
   h3 {
     position: absolute;
-    color: var(--color-black);
-    // outline it
-    outline-color: var(--color-white);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: var(--color-white);
+    -webkit-text-stroke-width: 1px;
     font-size: 8em;
-    transform: translate(105%, -130%);
+    transform: translate(105%, -60%);
   }
 
   .portfolio {
     margin: 0em;
+    padding: 1em;
   }
 
   .bio-container {
-    height: 100vh;
-
     div {
       display: flex;
       flex-direction: column;
-      transform: translate(10%, -5%);
+      transform: translate(-15%, 5%);
 
       div {
         background-color: var(--color-watermark);
         padding: 2em 1em;
         height: fit-content;
-        margin: 3em 7em;
+        margin: 3em 4em;
       }
       .about {
         font-size: 1.1em;
@@ -403,7 +439,7 @@ footer {
         border-radius: 50%;
         padding: 4em 3em;
         width: fit-content;
-        transform: translate(100%, -25%);
+        transform: translate(250%, -55%);
         cursor: pointer;
         color: var(--color-black);
         font-weight: 500;

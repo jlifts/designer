@@ -59,8 +59,8 @@ const Bio = () => {
           className='profile'
           src='images/pic-1.jpg'
           alt='profile'
-          height={600}
-          width={475}
+          height={550}
+          width={405}
         />
       </motion.div>
       <div className='bio-container'>

@@ -14,11 +14,24 @@ const Works = () => {
           />
         </span>
         <span className='card2'>
-          <Card
-            title='Videography'
-            imageUrl='/images/Pillow Photography 2.jpg'
-            body='lorem ipsum delor unao uobac jbfiyr ajann ieubdc qiebc jebco uebc ocibwor kwb ocnwo wejnbcvo wocn woinc'
-          />
+          <div className='card-container'>
+            <video
+              className='card-image'
+              loop
+              autoPlay
+              muted
+              src='/videos/Fluff1.mp4'
+              height={330}
+              width={330}
+            />
+            <div className='overlay'>
+              <h4 className='card-title'>Videography</h4>
+              <p className='card-text'>
+                lorem ipsum delor unao uobac jbfiyr ajann ieubdc qiebc jebco
+                uebc ocibwor kwb ocnwo wejnbcvo wocn woinc
+              </p>
+            </div>
+          </div>
         </span>
         <span className='card3'>
           <Card

@@ -7,7 +7,6 @@ import Loading from '../components/Loading';
 import { Nav } from '../components/Nav';
 import Footer from '../components/Footer';
 import { AnimatePresence } from 'framer-motion';
-// import HorizontalContainer from '../functions/Horizontal Scrolling';
 
 const Home: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -19,13 +18,13 @@ const Home: React.FC = () => {
       ) : (
         <>
           <Nav />
-          <div className='container-fluid'>
-            {/* <HorizontalContainer> */}
-            <Hero />
-            <Works />
-            <Contact />
-            <Bio />
-            {/* </HorizontalContainer> */}
+          <div className='wrapper'>
+            <div className='container-fluid'>
+              <Hero />
+              <Works />
+              <Contact />
+              <Bio />
+            </div>
           </div>
           <Footer />
         </>
