@@ -4,7 +4,7 @@ import Form from './Form';
 const Contact = () => {
   return (
     <section className='contact'>
-      <h2>Your Next Design Awaits</h2>
+      <h2 className='skew'>Your Next Design Awaits</h2>
       <div className='contact-container'>
         <img
           src='/images/Group 8.svg'

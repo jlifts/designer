@@ -17,8 +17,8 @@ const Bio = () => {
       });
     } else {
       animation.start({
-        opacity: 0,
-        y: 100,
+        opacity: 1,
+        // y: 100,
       });
     }
   }, [inView]);
@@ -32,8 +32,8 @@ const Bio = () => {
       });
     } else {
       anim.start({
-        opacity: 0,
-        x: 100,
+        opacity: 1,
+        // x: 100,
       });
     }
   }, [inView]);
@@ -46,14 +46,14 @@ const Bio = () => {
       });
     } else {
       anims.start({
-        opacity: 0,
+        opacity: 1,
       });
     }
   }, [inView]);
 
   return (
     <section className='bio'>
-      <h3>About Me</h3>
+      <h3 className='skew'>About Me</h3>
       <motion.div animate={animation} ref={ref}>
         <img
           className='profile'

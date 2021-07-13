@@ -35,6 +35,11 @@ body {
   font-family: Helvetica Neue, sans-serif;
   background-color: var(--color-black);
   color: var(--color-white);
+  overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    overflow-x: auto;
+  }
 }
 
 a {

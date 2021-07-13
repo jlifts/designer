@@ -11,6 +11,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        className='skew'
       >
         Taylor Lasher
       </motion.h1>
