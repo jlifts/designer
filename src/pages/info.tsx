@@ -1,15 +1,7 @@
 import React from 'react';
-import '../styles/Info.scss';
-// import Skills from '../components/Skills';
-// import Header from '../components/Header';
-// import PicRoll from '../components/PicRoll';
-// import i from '../Assets/img/cheryl-stone-wash-lifestyle-shot.jpg';
-// import i1 from '../Assets/img/CLO 3D Modeling.jpg';
-// import i2 from '../Assets/img/Photoshop work copy.jpg';
-// import i3 from '../Assets/img/Photoshop work copy2.jpg';
-// import i4 from '../Assets/img/Photoshop work.jpg';
-// import i5 from '../Assets/img/Photoshopped Lifestyle Image.jpg';
-// import i6 from '../Assets/img/Pillow Photography.jpg';
+import Skills from '../components/Skills';
+import Header from '../components/Header';
+import PicRoll from '../components/PicRoll';
 import { motion } from 'framer-motion';
 
 //Pictures
@@ -23,14 +15,17 @@ function Photography() {
       exit={{ opacity: 0, y: 70 }}
       transition={{ default: { duration: 1.3 } }}
     >
-      {/* <div className='sidebar'>
-        <Header className='upper' infoTitle='PHOTOGRAPHY' />
-        <Skills
-          className='skillz'
-          skill='Adobe Photoshop'
-          skill1='Adobe Illustrator'
-          skill2='Camera'
-        />
+      <div className='sidebar'>
+        <div className='upper'>
+          <Header infoTitle='PHOTOGRAPHY' />
+        </div>
+        <div className='skillz'>
+          <Skills
+            skill='Adobe Photoshop'
+            skill1='Adobe Illustrator'
+            skill2='Camera'
+          />
+        </div>
         <p className='info'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna
           risus, vestibulum non interdum ut, rutrum eget ipsum. Aenean non
@@ -62,16 +57,17 @@ function Photography() {
           quis sem id, bibendum consectetur tellus.
         </p>
       </div>
-      <PicRoll
-        className='roll'
-        pic={i}
-        pic1={i1}
-        pic2={i2}
-        pic3={i3}
-        pic4={i4}
-        pic5={i5}
-        pic6={i6}
-      /> */}
+      <div className='roll'>
+        <PicRoll
+          pic='/images/cheryl-stone-wash-lifestyle-shot.jpg'
+          pic1='/images/CLO 3D Modeling.jpg'
+          pic2='/images/Photoshop work copy.jpg'
+          pic3='./images/Photoshop work copy2.jpg'
+          pic4='/images/Photoshop work.jpg'
+          pic5='/images/Photoshopped Lifestyle Image.jpg'
+          pic6='/images/Pillow Photography.jpg'
+        />
+      </div>
     </motion.section>
   );
 }

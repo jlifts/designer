@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import Card from './InfoCards';
 
@@ -6,13 +7,15 @@ const Works = () => {
     <section className='works'>
       <h1 className='skew'>Designs</h1>
       <div className='card-container'>
-        <span className='card1 skew'>
-          <Card
-            title='Photography'
-            imageUrl='/images/cheryl-stone-wash-lifestyle-shot.jpg'
-            body='lorem ipsum delor unao uobac jbfiyr ajann ieubdc qiebc jebco uebc ocibwor kwb ocnwo wejnbcvo wocn woinc'
-          />
-        </span>
+        <Link href='/info'>
+          <span className='card1 skew'>
+            <Card
+              title='Photography'
+              imageUrl='/images/cheryl-stone-wash-lifestyle-shot.jpg'
+              body='lorem ipsum delor unao uobac jbfiyr ajann ieubdc qiebc jebco uebc ocibwor kwb ocnwo wejnbcvo wocn woinc'
+            />
+          </span>
+        </Link>
         <span className='card2 skew'>
           <div className='card-container'>
             <video
