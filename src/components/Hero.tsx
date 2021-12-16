@@ -8,8 +8,8 @@ const Hero: React.FC = () => {
   return (
     <section className='hero-container'>
       <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         className='skew'
       >

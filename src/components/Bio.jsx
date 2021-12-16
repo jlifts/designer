@@ -7,9 +7,10 @@ const Bio = () => {
   const animation = useAnimation();
   const anim = useAnimation();
   const anims = useAnimation();
+  const phone = typeof window !== "undefined" ? window.innerWidth < 380 : null;
 
   useEffect(() => {
-    if (inView) {
+    if (inView || phone) {
       animation.start({
         opacity: 1,
         y: 0,
@@ -17,14 +18,14 @@ const Bio = () => {
       });
     } else {
       animation.start({
-        opacity: 1,
-        // y: 100,
+        opacity: 0,
+        y: 100,
       });
     }
   }, [inView]);
 
   useEffect(() => {
-    if (inView) {
+    if (inView || phone) {
       anim.start({
         opacity: 1,
         x: 0,
@@ -32,21 +33,21 @@ const Bio = () => {
       });
     } else {
       anim.start({
-        opacity: 1,
-        // x: 100,
+        opacity: 0,
+        x: 100,
       });
     }
   }, [inView]);
 
   useEffect(() => {
-    if (inView) {
+    if (inView || phone) {
       anims.start({
         opacity: 1,
         transition: { type: 'spring', duration: 1, delay: 1.5 },
       });
     } else {
       anims.start({
-        opacity: 1,
+        opacity: 0,
       });
     }
   }, [inView]);
@@ -85,7 +86,7 @@ const Bio = () => {
           </motion.div>
           <motion.a
             className='circle'
-            href='/favicon.ico'
+            href="/Taylor Lasher's Resume.pdf"
             download
             animate={anims}
             ref={ref}

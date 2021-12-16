@@ -9,15 +9,15 @@ const Social = () => {
   return (
     <div className='socials'>
       <a
-        href='https://www.linkedin.com/in/burgess-josh/'
+        href='https://www.linkedin.com/in/taylor-lasher-0a2b98149'
         target='blank'
         className='linkedin social'
       >
         <FontAwesomeIcon icon={faLinkedin} size='2x' />
       </a>
-      <a href='https://dribble.com' target='blank' className='dribble social'>
+      {/* <a href='https://dribble.com' target='blank' className='dribble social'>
         <FontAwesomeIcon icon={faDribbbleSquare} size='2x' />
-      </a>
+      </a> */}
     </div>
   );
 };

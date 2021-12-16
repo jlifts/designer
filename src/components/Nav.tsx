@@ -4,13 +4,13 @@ import Link from 'next/link';
 export const Nav = () => {
   return (
     <div className='nav'>
-      <Link href='/info'>
+      <Link href='/info/photography'>
         <a>Photography</a>
       </Link>
-      <Link href='/#'>
+      <Link href='/info/packaging'>
         <a>Packaging</a>
       </Link>
-      <Link href='/#'>
+      <Link href='/info/logodesign'>
         <a>Logos</a>
       </Link>
     </div>
