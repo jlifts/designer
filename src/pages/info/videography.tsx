@@ -9,13 +9,13 @@ import { motion } from 'framer-motion';
 function Videography() {
   return (
     <motion.section
-      className='info-section'
+      className='info-video'
       initial={{ opacity: 0, y: -70 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 70 }}
       transition={{ default: { duration: 1.3 } }}
     >
-      <div className='sidebar'>
+      <div className='sidebar-video'>
         <div className='upper'>
           <Header infoTitle='VIDEOGRAPHY' />
         </div>
@@ -34,11 +34,11 @@ understand each project’s goal and am able to capture those ideas on
 video and turn that into a powerful message.
         </p>
       </div>
-      <div className='roll'>
-        <div className='roll'>
-          <div className='Pic-wrapper'>
+      <div className='video-section'>
+        <div className='video-section'>
+          <div className='video-section'>
             <video
-                className='card-image '
+                className='a-video '
                 loop
                 autoPlay
                 muted

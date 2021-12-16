@@ -759,3 +759,27 @@ footer {
 .roll {
   z-index: 0;
 }
+.video-section {
+  position: absolute;
+  display: block;
+  width: 100vw !important;
+}
+.a-video{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.sidebar-video {
+  margin: 1em;
+  overflow-x: hidden;
+  height: auto;
+  top: 0;
+  left: 0;
+  margin-bottom: 5em;
+}
+.info-video {
+    max-height: 100vh !important;
+    overflow: hidden;
+    background: var(--white-color);
+    z-index: -1;
+}
